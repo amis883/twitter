@@ -1,8 +1,9 @@
 import React from 'react'
-import useStyle from './styles'
+import useStyles from './styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import ButtonBase from '@material-ui/core/ButtonBase'
+import { Link } from "react-router-dom"
 const hashTags = [
     "پرچم دار-جدید",
     "کرونا",
@@ -14,29 +15,34 @@ const hashTags = [
     "پیروزی",
 ]
 const RightSidebar = () => {
-    const classes = useStyle()
+    const classes = useStyles()
     return (
         <div className={classes.root}>
-            <Grid container direction={'row'} textalign={'center'}>
-                <Grid item>
-                    <img className={classes.logoPic} src={'logo.png'} alt={'logo'} />
+            <Link to={"/"}>
+                <Grid container direction={'row'} alignItems={'center'}>
+                    <Grid item>
+                        <img className={classes.logoPic} src="/assets/logo.png" alt={'logo'} />
+                    </Grid>
+                    <Grid item>
+                        <Typography className={classes.logoType}>توییتر فارسی</Typography>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Typography className={classes.logoType}>توییتر فارسی</Typography>
-                </Grid>
-                <Typography className={classes.hashTagTitle}>
-                    داغ ترین هشتگ ها
-        </Typography>
-                <Grid container direction={'column'} alignItems={'center'}>
-                    {hashTags.map(item => <ButtonBase key={item.id} className={classes.hashTagparent}>
+            </Link>
+            <Typography className={classes.hashTagTitle}>
+                داغ ترین هشتگ ها
+            </Typography>
+            <Grid container direction={'column'} alignItems={'center'}>
+                {hashTags.map(item => <ButtonBase key={item.id} className={classes.hashTagparent}>
+                    <Link to={"/hastags/" + item} style={{ width: '100%' }}>
                         <Grid item container>
                             <Typography className={classes.hashtag} >{item}</Typography>
-                            <img className={classes.hashtagPic} src={'hashtag.png'} alt={'hashtag'} />
+                            <img className={classes.hashtagPic} src='/hashtag.png' alt={'hashtag'} />
 
                         </Grid>
-                    </ButtonBase>)}
+                    </Link>
+                </ButtonBase>)}
 
-                </Grid>
+
             </Grid>
         </div>
     )

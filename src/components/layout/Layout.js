@@ -1,19 +1,27 @@
-import React from 'react';
-import RightSidebar from '../layout/rightSidebar/RightSidebar';
-import useStyle from './styles'
-import Divider from "@material-ui/core/Divider"
+import React from 'react'
+import RightSidebar from '../layout/rightSidebar/RightSidebar'
+import LeftSidebar from '../layout/leftSidebar/LeftSidebar'
+import Divider from '@material-ui/core/Divider'
+import useStyles from './styles'
+import Home from '../../pages/home/Home'
 
 
-const Layout = () => {
-    const classes = useStyle();
+
+
+const Layout = (props) => {
+    const classes = useStyles()
     return (
         <div className={classes.root}>
-            <div className={classes.leftSidebar}>leftSidebar</div>
-            <div className={classes.mainPart}>Main Part</div>
-            <Divider orientation={"vertical"} className={classes.divider} />
+            <LeftSidebar />
+            <Divider orientation={'vertical'} className={classes.divider} />
+            <div className={classes.content}>
+                {props.children}
+            </div>
+            <Home />
+            <Divider orientation={'vertical'} className={classes.divider} />
             <RightSidebar />
         </div>
-    );
-};
+    )
+}
 
-export default Layout;
+export default Layout

@@ -1,28 +1,30 @@
 
 import { makeStyles } from '@material-ui/styles';
-const useStyles = makeStyles(theme => ({
+const useStyle = makeStyles(theme => ({
 
     root: {
         backgroundColor: 'white',
         width: '18%',
-        padding: '1.5rem 1rem'
+        padding: '1.5rem 1rem',
+
+
     },
     logoType: {
-        fontSize: '1.25rem',
-        fontWeight: '600',
-        marginRight: '1rem',
+        fontSize: '1.25rem !important',
+        fontWeight: '600 !important',
+        marginLeft: '1rem !important',
         color: theme.palette.primary.main
     },
     logoPic: {
-        width: '3rem',
-        height: '3rem',
-        marginLeft: '0.3rem'
+        width: '3.5rem !important',
+        height: '3.5rem !important',
+        marginRight: '0.3rem !important'
     },
     hashTagTitle: {
-        fontSize: '1.25rem',
-        fontWeight: '600',
-        marginTop: '3rem',
-        marginBottom: "1.5rem"
+        fontSize: '1.25rem !important',
+        fontWeight: '600 !important',
+        marginTop: '3rem !important',
+        marginBottom: "1.5rem !important"
 
     },
     hashtag: {
@@ -30,9 +32,9 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.85rem'
 
     },
-    hashTagParent: {
+    hashTagparent: {
         marginBottom: '0.5rem !important',
-        padding: "1.5rem !important",
+        padding: "1rem !important",
         width: "100%"
     },
     hashtagPic: {
@@ -42,4 +44,4 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
-export default useStyles;
+export default useStyle;

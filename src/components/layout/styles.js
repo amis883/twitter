@@ -1,20 +1,15 @@
 
-import { makeStyles } from '@material-ui/styles';
-const useStyle = makeStyles({
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles({
     root: {
         display: 'flex',
         height: '100vh',
         width: '100%',
-        overflow: 'hidden'
+        overflow: 'hidden',
+
     },
-    leftSidebar: {
-        backgroundColor: '#white',
-        width: '25%'
-    },
-    mainPart: {
-        backgroundColor: '#white',
-        flex: '1'
-    },
+
+
     divider: {
         height: '100%',
         width: '1', backgroundColor: '#7EBAFF !important',
@@ -22,4 +17,4 @@ const useStyle = makeStyles({
     }
 
 });
-export default useStyle;
+export default useStyles;
