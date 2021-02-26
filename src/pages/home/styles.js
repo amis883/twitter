@@ -23,6 +23,13 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column'
     },
+    tweetItem: {
+        padding: '18',
+        backgroundColor: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '0.5rem'
+    },
     input: {
         flex: '1',
         marginRight: '1rem',

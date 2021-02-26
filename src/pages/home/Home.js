@@ -2,6 +2,8 @@ import React from 'react'
 import NewTweet from './components/NewTweet'
 import Header from './components/Header'
 import Divider from '@material-ui/core/Divider'
+import TweetList from './components/TweetList'
+
 
 
 import useStyles from './styles'
@@ -13,6 +15,7 @@ const Home = () => {
             <Header />
             <Divider />
             <NewTweet />
+            <TweetList />
         </div>
 
     );
