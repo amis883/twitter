@@ -1,12 +1,14 @@
 
 import React from 'react';
 import Tweet from '../components/Tweet'
-const TweetList = () => {
+const TweetList = ({ data }) => {
     return (
         <div>
-            <Tweet />
-            <Tweet />
-            <Tweet />
+
+            {
+                data.map(tweet => <Tweet data={tweet} key={data.id} />)
+            }
+
         </div>
     );
 };
