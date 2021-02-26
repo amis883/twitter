@@ -1,14 +1,18 @@
 import React from 'react'
-import Search from './components/Search'
+import NewTweet from './components/NewTweet'
+import Header from './components/Header'
+import Divider from '@material-ui/core/Divider'
+
+
 import useStyles from './styles'
 
 const Home = () => {
     const classes = useStyles()
     return (
         <div className={classes.root}>
-
-            Main Part
-            <Search />
+            <Header />
+            <Divider />
+            <NewTweet />
         </div>
 
     );
