@@ -1,10 +1,18 @@
 import { ButtonBase, Divider, Grid, Typography } from '@material-ui/core';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getUsers } from '../../../api/api-tweet'
 
 import useStyles from './styles'
 const Tweeter = ({ name, id, img }) => {
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        getUsers((isok, data) => {
+            if (!isok)
+                return alert("not success")
+            setUsers(data)
+        })
+    }, [])
     const classes = useStyles()
-
     return <ButtonBase>
         <Grid container direction={"row"} className={classes.tweeterParent}>
             <Grid item container direction={"column"} style={{ width: 'max-content' }} className={classes.tweeterNameParent}>
@@ -14,7 +22,6 @@ const Tweeter = ({ name, id, img }) => {
             </Grid>
         </Grid>
     </ButtonBase>
-
 }
 const tweeter = [{
     name: 'Xiaomi',
@@ -57,20 +64,14 @@ const LeftSidebar = () => {
                                 name={item.name}
                                 id={item.id}
                                 img={item.img}
-                                key={item.width} />
+                            />
                             {index !== tweeter.length - 1 &&
                                 <Divider style={{ marginLeft: -24, marginRight: -24 }} />}
                         </>)
                     })
                 }
-
-
-
             </Grid>
-
         </div>
-
     );
 };
-
 export default LeftSidebar;

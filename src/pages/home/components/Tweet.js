@@ -1,7 +1,7 @@
 import React from 'react'
 import useStyles from '../styles'
 import { Typography, Grid, IconButton } from '@material-ui/core'
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@material-ui/icons/Favorite'
 
 const Tweet = ({ data }) => {
     const classes = useStyles()
@@ -15,9 +15,18 @@ const Tweet = ({ data }) => {
                     style={{ height: 'max-content' }}
                 />
                 <Grid item container>
-                    <Grid item container direction={'column'} style={{ flex: '1', marginRight: '1rem' }}>
-                        <Typography className={classes.tweetItemName}>{data.sender.name}</Typography>
-                        <Typography className={classes.tweetItemId}>{data.sender.id}</Typography>
+                    <Grid
+                        item
+                        container
+                        direction={'column'}
+                        style={{ flex: '1', marginRight: '1rem' }}
+                    >
+                        <Typography className={classes.tweetItemName}>
+                            {data.sender.name}
+                        </Typography>
+                        <Typography className={classes.tweetItemId}>
+                            {data.sender.id}
+                        </Typography>
                     </Grid>
                     <Typography className={classes.tweetText}> {data.text}</Typography>
                 </Grid>
@@ -37,7 +46,6 @@ const Tweet = ({ data }) => {
                 </IconButton>
                 <IconButton className={classes.newTweetImgBtn}>
                     <FavoriteIcon />
-
                 </IconButton>
                 <Typography className={classes.likeCount}>{data.likes}</Typography>
             </Grid>

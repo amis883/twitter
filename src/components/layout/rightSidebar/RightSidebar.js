@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useStyles from './styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import { Link } from "react-router-dom"
-const hashTags = [
-    "پرچم دار-جدید",
-    "کرونا",
-    "هلو-سامر",
-    "پیروزی",
-    "پرچم دار-جدید",
-    "کرونا",
-    "هلو-سامر",
-    "پیروزی",
-]
+import { getHashTags } from '../../../api/api-tweet'
+//  const hashTags = [
+//     "پرچم دار-جدید",
+//     "کرونا",
+//     "هلو-سامر",
+//     "پیروزی",
+//     "پرچم دار-جدید",
+//     "کرونا",
+//     "هلو-سامر",
+//     "پیروزی",
+// ]
 const RightSidebar = () => {
+    const [hashTags, setHashTags] = useState();
+    useEffect(() => {
+        getHashTags((isok, data) => {
+            if (!isok)
+                return alert("not success")
+            setHashTags(data)
+        })
+    }, [])
     const classes = useStyles()
     return (
         <div className={classes.root}>

@@ -9,7 +9,17 @@ const Theme = createMuiTheme({
     overrides: {
         MuiTypography: {
             root: {
-                fontFamily: "shabnam"
+                fontFamily: "shabnam !important"
+            }
+        },
+        MuiListItem: {
+            button: {
+                fontFamily: "shabnam !important"
+            }
+        },
+        MuiButton: {
+            label: {
+                fontFamily: "shabnam !important"
             }
         }
     }
