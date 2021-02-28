@@ -41,7 +41,7 @@ const RightSidebar = () => {
                 داغ ترین هشتگ ها
             </Typography>
             <Grid container direction={'column'} alignItems={'center'}>
-                {hashTags.map(item => <ButtonBase key={item.id} className={classes.hashTagparent}>
+                {hashTags.map(item => <ButtonBase key={hashTags.id} className={classes.hashTagparent}>
                     <Link to={"/hastags/" + item} style={{ width: '100%' }}>
                         <Grid item container>
                             <Typography className={classes.hashtag} >{item}</Typography>

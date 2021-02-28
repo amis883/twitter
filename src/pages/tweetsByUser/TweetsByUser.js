@@ -1,5 +1,5 @@
 import { Divider } from '@material-ui/core'
-import PersonIcon from '@material-ui/core/Person'
+import PersonIcon from '@material-ui/icons/Person';
 import React, { useEffect, useState } from 'react'
 import { getAllTweets } from '../../api/api-tweet'
 import useStyles from '../auth/styles'
@@ -20,7 +20,8 @@ const TweetsByUser = (props) => {
     const classes = useStyles;
     return (
         <div className={classes.root}>
-            <Header title={props.match.params.user} icon={<PersonIcon />} />
+            <Header title={props.match.params.user}
+                icon={<PersonIcon />} />
             <Divider />
             <TweetList data={tweets} />
 

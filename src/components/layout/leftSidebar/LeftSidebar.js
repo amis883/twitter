@@ -64,6 +64,7 @@ const LeftSidebar = () => {
                                 name={item.name}
                                 id={item.id}
                                 img={item.img}
+                                key={tweeter.id}
                             />
                             {index !== tweeter.length - 1 &&
                                 <Divider style={{ marginLeft: -24, marginRight: -24 }} />}
