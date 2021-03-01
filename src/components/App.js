@@ -49,6 +49,7 @@ const PrivateRoute = ({ render, ...props }) => {
         if (isLogin())
             return render(props);
         else return <Redirect to={"/login"} />
+
     }} />
 }
 export default App;

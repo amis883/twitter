@@ -5,7 +5,7 @@ export const loginApi = (user, callback) => {
             const data = response.data;
             callback(true, data)
         }).catch(error => {
-            console.log(error)
+
             callback(false, error.response.message)
         })
 }

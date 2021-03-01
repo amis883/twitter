@@ -1,9 +1,10 @@
-import { ButtonBase, Divider, Grid, Typography } from '@material-ui/core';
+import { ButtonBase, Divider, Grid, Menu, MenuItem, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import { getUsers } from '../../../api/api-tweet'
 
 import useStyles from './styles'
 const Tweeter = ({ name, id, img }) => {
+    const classes = useStyles()
     const [users, setUsers] = useState([]);
     useEffect(() => {
         getUsers((isok, data) => {
@@ -12,7 +13,7 @@ const Tweeter = ({ name, id, img }) => {
             setUsers(data)
         })
     }, [])
-    const classes = useStyles()
+
     return <ButtonBase>
         <Grid container direction={"row"} className={classes.tweeterParent}>
             <Grid item container direction={"column"} style={{ width: 'max-content' }} className={classes.tweeterNameParent}>
@@ -44,10 +45,17 @@ const tweeter = [{
     img: "images/user.png"
 }]
 const LeftSidebar = () => {
+    const [anchorMenu, setAnchorMenu] = useState([]);
+    const handleToggleMenu = (e) => {
+        if (anchorMenu)
+            setAnchorMenu(null);
+        else
+            setAnchorMenu(e.currentTarget);
+    };
     const classes = useStyles()
     return (
-        <div className={classes.root} >
-            <Grid container direction={"row-reverse"} >
+        <div className={classes.root}  >
+            <Grid container direction={"row-reverse"} onClick={handleToggleMenu} style={{ cursor: 'pointer' }}>
                 <Grid item container direction={"column"} style={{ width: 'max-content' }} className={classes.profText}>
                     <img src={"images/user.png"} alt={"user"} style={{ width: 'max-content' }} />
                     <Typography className={classes.profName}>سبذسبظیسبدظیدد</Typography>
@@ -72,6 +80,9 @@ const LeftSidebar = () => {
                     })
                 }
             </Grid>
+            <Menu open={Boolean(anchorMenu)} onClose={() => setAnchorMenu(null)} anchorEl={anchorMenu}>
+                <MenuItem onClick={() => { localStorage.clear(); window.location.reload() }}>خروج</MenuItem>
+            </Menu>
         </div>
     );
 };
