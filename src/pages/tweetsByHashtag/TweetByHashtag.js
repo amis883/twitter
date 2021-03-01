@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import useStyles from './styles'
+
 import Divider from '@material-ui/core/Divider'
 import Header from '../../components/Header/header'
 import { getAllTweets } from '../../api/api-tweet';
-import TweetList from './home/components/TweetList';
+import TweetList from '../home/components/TweetList';
+import useStyles from '../home/styles';
+
+
 
 const TweetByHashtag = (props) => {
     const classes = useStyles();
-
     const [tweets, setTweets] = useState();
     useEffect(() => {
 

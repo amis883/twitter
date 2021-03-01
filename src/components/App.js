@@ -6,10 +6,13 @@ import Page404 from '../pages/Page404'
 import AuthPage from '../pages/auth/AuthPage';
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify';
+import TweetsByUser from "../pages/tweetsByUser/TweetsByUser";
+import TweetByHashtag from "../pages/tweetsByHashtag/TweetByHashtag";
+
 
 const App = () => {
     return (
-        <div>
+        <>
             <BrowserRouter>
                 <Switch>
                     <PublicRoute path="/login" component={AuthPage} />
@@ -18,7 +21,8 @@ const App = () => {
                             <Layout>
                                 <Switch>
                                     <Route exact path={"/"} compoenent={Home} />
-                                    <Route exact path={"/hashtags/:hashtag"} compoenent={Page404} />
+                                    <Route exact path={"/hashtags/:hashtag"} compoenent={TweetByHashtag} />
+                                    <Route exact path={"/users/:user"} compoenent={TweetsByUser} />
                                     <Route component={Page404} />
                                 </Switch>
                             </Layout>
@@ -26,7 +30,7 @@ const App = () => {
                 </Switch>
             </BrowserRouter>
             <ToastContainer />
-        </div>
+        </>
     );
 };
 //public route
