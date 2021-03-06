@@ -10,7 +10,7 @@ const tweets = [
         sender: {
             name: 'sumsong',
             id: '@sumsong',
-            img: 'images/user.png'
+            // img: 'images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -20,7 +20,7 @@ const tweets = [
         sender: {
             name: 'loobia',
             id: '@loobia',
-            img: 'images/user.png'
+            // img: 'images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -30,7 +30,7 @@ const tweets = [
         sender: {
             name: 'piaz',
             id: '@piaz',
-            img: 'images/user.png'
+            // img: 'images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -40,7 +40,7 @@ const tweets = [
         sender: {
             name: 'nokhodfarangi',
             id: '@nokhodfarangi',
-            img: 'images/user.png'
+            // img: 'images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -50,7 +50,7 @@ const tweets = [
         sender: {
             name: 'cheshmbolboli',
             id: '@cheshmbolboli',
-            img: 'images/user.png'
+            // img: 'images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -66,8 +66,8 @@ const Home = () => {
 
         getAllTweets((isok, data) => {
             if (!isok)
-                return alert("not success")
-            setTweets(data)
+                // return alert("not success")
+                setTweets(data)
         })
     }, [])
     return (

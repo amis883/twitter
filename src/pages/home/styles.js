@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -50,15 +50,13 @@ const useStyles = makeStyles(theme => ({
             minWidth: '5rem !important'
         },
         tweetItemName: {
-            fontWeight: '600',
+            fontWeight: '600'
         },
         tweetItemId: {
             fontSize: '.9rem',
             color: theme.palette.text.hint,
             marginRight: '.5rem',
             paddingTop: '.1rem'
-
-
         },
 
         newTweetImgBtn: {
@@ -70,7 +68,6 @@ const useStyles = makeStyles(theme => ({
         tweetText: {
             fontSize: '.9rem',
             paddingTop: '.75rem'
-
         },
         likeCount: {
             color: theme.palette.text.hint,

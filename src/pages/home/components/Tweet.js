@@ -39,7 +39,7 @@ const Tweet = ({ data }) => {
             >
                 <IconButton className={classes.newTweetImgBtn}>
                     <img
-                        src={'images/user.png'}
+                        // src={'images/user.png'}
                         alt={'user'}
                         className={classes.newTweetImg}
                     />

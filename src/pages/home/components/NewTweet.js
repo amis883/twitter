@@ -8,7 +8,7 @@ const Newtweet = () => {
         <div className={classes.newTweet}>
             <Grid container>
                 <img
-                    src={'images/user.png'}
+                    // src={'images/user.png'}
                     alt={'user'}
                     style={{ width: 'max-content' }}
                 />
@@ -28,7 +28,7 @@ const Newtweet = () => {
         </Button>
                 <IconButton className={classes.newTweetImgBtn}>
                     <img
-                        src={'images/user.png'}
+                        // src={'images/user.png'}
                         alt={'user'}
                         className={classes.newTweetImg}
                     />

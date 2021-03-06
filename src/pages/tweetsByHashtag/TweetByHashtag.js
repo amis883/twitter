@@ -15,13 +15,13 @@ const TweetByHashtag = (props) => {
 
         getAllTweets((isok, data) => {
             if (!isok)
-                return alert("not success")
-            setTweets(data)
+                // return alert("not success")
+                setTweets(data)
         })
     }, [])
     return (
         <div className={classes.root}>
-            <Header title={"props.match.params.hashtag"} icon={'<img src={"/assets/hashtag.png"} />'} />
+            <Header title={"props.match.params.hashtag"} icon={'<img src={"/images/hashtag.png"} />'} />
             <Divider className={classes.divider} />
             <TweetList data={tweets} />
 

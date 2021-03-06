@@ -44,4 +44,3 @@ export const newTweetRequest = (data, callback) => {
             callback(false, error)
         })
 }
-// export default getAllTweets

@@ -6,7 +6,7 @@ const TweetList = ({ data }) => {
 
     return (
         <>
-            {data.map(tweet => <Tweet data={tweet} />)}
+            {/* {data.map(tweet => <Tweet data={tweet} />)} */}
         </>
     );
 };

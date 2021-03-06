@@ -15,18 +15,18 @@ const App = () => {
         <>
             <BrowserRouter>
                 <Switch>
-                    <PublicRoute path="/login" component={AuthPage} />
-                    <PrivateRoute path={"/"}
-                        render={() => {
-                            <Layout>
-                                <Switch>
-                                    <Route exact path={"/"} compoenent={Home} />
-                                    <Route exact path={"/hashtags/:hashtag"} compoenent={TweetByHashtag} />
-                                    <Route exact path={"/users/:user"} compoenent={TweetsByUser} />
-                                    <Route component={Page404} />
-                                </Switch>
-                            </Layout>
-                        }} />
+                    <Route path="/login" component={AuthPage} />
+                    {/* <Route path={"/"}
+                        render={() => { */}
+                    <Layout>
+                        <Switch>
+                            <Route exact path={"/"} component={Home} />
+                            <Route exact path={"/hashtags/:hashtag"} component={TweetByHashtag} />
+                            <Route exact path={"/users/:user"} component={TweetsByUser} />
+                            <Route component={Page404} />
+                        </Switch>
+                    </Layout>
+                    {/* }} /> */}
                 </Switch>
             </BrowserRouter>
             <ToastContainer />
@@ -34,22 +34,25 @@ const App = () => {
     );
 };
 //public route
-const isLogin = () => !!localStorage.getItem("x-auth-token")
-const PublicRoute = ({ component, ...props }) => {
-    return <Route {...props} render={(props) => {
-        if (isLogin())
-            return <Redirect to={"/"} />
-        else return React.createElement(component, props)
-    }} />
+// const isLogin = () => !!localStorage.getItem("x-auth-token")
+// const PublicRoute = ({ component, ...props }) => {
+//     return <Route {...props} render={(props) => {
 
-}
+//         if (isLogin())
+//             return <Redirect to={"/"} />
+//         else return React.createElement(component, props)
+//     }} />
+
+// }
 //Private route
-const PrivateRoute = ({ render, ...props }) => {
-    return <Route {...props} render={(props) => {
-        if (isLogin())
-            return render(props);
-        else return <Redirect to={"/login"} />
+// const PrivateRoute = ({ render, ...props }) => {
+//     return <Route {...props} render={(props) => {
+//         console.log("Hellloooo private")
 
-    }} />
-}
+//         if (isLogin())
+//             return render(props);
+//         else return <Redirect to={"/login"} />
+
+//     }} />
+// }
 export default App;
