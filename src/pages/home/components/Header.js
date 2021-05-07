@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className={classes.header}>
             <HomeIcon />
-            <Typography>خانه</Typography>
+            <Typography className={classes.headerTitle}>خانه</Typography>
         </div>
     )
 }

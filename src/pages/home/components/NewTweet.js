@@ -8,7 +8,7 @@ const Newtweet = () => {
         <div className={classes.newTweet}>
             <Grid container>
                 <img
-                    // src={'images/user.png'}
+                    src={'images/user img.png'}
                     alt={'user'}
                     style={{ width: 'max-content' }}
                 />
@@ -18,8 +18,9 @@ const Newtweet = () => {
                     className={classes.input}
                 ></textarea>
             </Grid>
-            <Grid container direction={'row'} style={{ marginTop: 16 }}>
+            <Grid container direction={'row-reverse'} style={{ marginTop: '16px' }}>
                 <Button
+                style={{ borderRadius: '16px' }}
                     variant={'contained'}
                     color={'primary'}
                     className={classes.newTweetBtn}
@@ -28,9 +29,10 @@ const Newtweet = () => {
         </Button>
                 <IconButton className={classes.newTweetImgBtn}>
                     <img
-                        // src={'images/user.png'}
+                        src={'../images/tweetpic.png'}
                         alt={'user'}
                         className={classes.newTweetImg}
+                        style={{ borderRadius: '50%' }}
                     />
                 </IconButton>
             </Grid>

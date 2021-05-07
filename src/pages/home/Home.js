@@ -73,7 +73,7 @@ const Home = () => {
     return (
         <div className={classes.root}>
             <Header />
-            <Divider />
+            <Divider className={classes.divider}/>
             <NewTweet />
             <TweetList data={tweets} />
         </div>

@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
         overflowY: 'auto'
     },
     header: {
-        padding: '18',
+        padding: '18px',
         backgroundColor: 'white',
         display: 'flex'
     },
@@ -21,13 +21,13 @@ const useStyles = makeStyles(theme => ({
         filter: 'opacity(0.18)'
     },
     newTweet: {
-        padding: '18',
+        padding: '20px',
         backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column'
     },
     tweetItem: {
-        padding: '18',
+        padding: '18px',
         backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
@@ -35,18 +35,18 @@ const useStyles = makeStyles(theme => ({
     },
     input: {
         flex: '1',
-        marginRight: '1rem',
+        marginRight: '16px',
         border: 'none',
         '&:focus': {
             outline: 'unset'
         },
         newTweetBtn: {
-            color: 'white !important',
-            borderRadious: '1rem !important',
-            minHeight: '30px !important',
-            height: '30px !important',
-            fontFamily: 'shabnam',
-            lineHeight: '1rem !important',
+            color: 'white',
+            borderRadious: '20px !important',
+            minHeight: '30px',
+            height: '30px',
+            fontFamily: 'shabnam !important',
+            lineHeight: '1rem',
             minWidth: '5rem !important'
         },
         tweetItemName: {
@@ -74,6 +74,25 @@ const useStyles = makeStyles(theme => ({
             fontSize: '.9rem',
             marginLeft: '.5rem'
         }
+    }
+    ,
+    newTweetBtn: {
+        color: 'white !important',
+        minHeight: '30px !important',
+        height: '30px !important',
+        fontFamily: 'shabnam',
+        lineHeight: '16px !important'
+        , minWidth: '5rem !important'
+    },
+    newTweetImg: {
+
+
+    },
+    newTweetImgBtn: {
+        border: '0.5px solid #3337',
+        padding: '0.2rem !important',
+        marginLeft: '16px'
+
     }
 }))
 
