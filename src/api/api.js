@@ -1,19 +1,19 @@
 import Axios from 'axios';
 
-// export const getAxiosInstance = () => {
-//     return Axios.create({
-//         baseURL: " https://twitterapi.liara.run",
-//         headers: {
-//             API_KEY: "kjnsxkjANASJNCkJASNCjaSNCaBcbcsvcv"
-//         }
-//     })
-// }
+export const getAxiosInstance = () => {
+    return Axios.create({
+        baseURL: " https://twitterapi.liara.run/api/",
+        headers: {
+            API_KEY: "kjnsxkjANASJNCkJASNCjaSNCaBcbcsvcv"
+        }
+    })
+}
 
 export const getAxiosInstanceAuth = () => {
     return Axios.create({
         baseURL: " https://twitterapi.liara.run/api/",
         headers: {
-            // API_KEY: "kjnsxkjANASJNCkJASNCjaSNCaBcbcsvcv"
+            API_KEY: "kjnsxkjANASJNCkJASNCjaSNCaBcbcsvcv"
         }
     })
 }
@@ -26,4 +26,4 @@ export const getAxiosInstanceJsonServer = () => {
         }
     })
 }
-// export default getAxiosInstance;
+export default getAxiosInstance;

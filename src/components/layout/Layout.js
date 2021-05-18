@@ -3,7 +3,8 @@ import RightSidebar from '../layout/rightSidebar/RightSidebar'
 import LeftSidebar from '../layout/leftSidebar/LeftSidebar'
 import Divider from '@material-ui/core/Divider'
 import useStyle from './styles'
-import Home from '../../pages/home/Home'
+// import Home from '../../pages/home/Home'
+import TweetByHashtag from '../../pages/tweetsByHashtag/TweetByHashtag'
 // import Home from '../../pages/home/Home'
 // import TweetsByUser from '../../pages/tweetsByUser/TweetsByUser'
 
@@ -13,7 +14,8 @@ const Layout = () => {
         <div className={classes.root}>
             <RightSidebar />
             <Divider orientation={'vertical'} className={classes.divider} />
-<Home/>
+{/* <Home/> */}
+<div className={classes.content}> <TweetByHashtag/></div>
             {/* <div className={classes.mainPart}>main part</div> */}
             <Divider orientation={'vertical'} className={classes.divider} />
             <LeftSidebar />

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import Divider from '@material-ui/core/Divider'
 import Header from '../../components/Header/header'
 import { getAllTweets } from '../../api/api-tweet';
@@ -15,13 +14,13 @@ const TweetByHashtag = (props) => {
 
         getAllTweets((isok, data) => {
             if (!isok)
-                // return alert("not success")
+                return alert("not success")
                 setTweets(data)
         })
     }, [])
     return (
         <div className={classes.root}>
-            <Header title={"props.match.params.hashtag"} icon={'<img src={"/images/hashtag.png"} />'} />
+            <Header title={"props.match.params.hashtag"} icon={'<img src={"/images/hashtag.png"} alt={}/>'} />
             <Divider className={classes.divider} />
             <TweetList data={tweets} />
 

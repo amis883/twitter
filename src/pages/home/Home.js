@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NewTweet from './components/NewTweet'
 import Header from './components/Header'
 import Divider from '@material-ui/core/Divider'
+import {Home as HomeIcon} from "@material-ui/icons";
 import TweetList from './components/TweetList'
 import useStyles from './styles'
 import { getAllTweets } from '../../api/api-tweet'
@@ -10,7 +11,7 @@ const tweets = [
         sender: {
             name: 'sumsong',
             id: '@sumsong',
-            // img: 'images/user.png'
+             img: '/public/images/koooh_user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -20,7 +21,7 @@ const tweets = [
         sender: {
             name: 'loobia',
             id: '@loobia',
-            // img: 'images/user.png'
+             img: '/public/images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -30,7 +31,7 @@ const tweets = [
         sender: {
             name: 'piaz',
             id: '@piaz',
-            // img: 'images/user.png'
+            img: '/public/images/user.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -40,7 +41,7 @@ const tweets = [
         sender: {
             name: 'nokhodfarangi',
             id: '@nokhodfarangi',
-            // img: 'images/user.png'
+            img: '/public/images/person.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -50,7 +51,7 @@ const tweets = [
         sender: {
             name: 'cheshmbolboli',
             id: '@cheshmbolboli',
-            // img: 'images/user.png'
+            img: '/public/images/person.png'
         },
         text:
             'در این مقاله با مفاهیم بنیادی گیت، طرز کار با آن، اصطلاحات گیت‌هاب و کاربردهای هرکدام آشنا شدید.',
@@ -60,19 +61,19 @@ const tweets = [
 
 const Home = () => {
     const classes = useStyles()
-    const [tweets, setTweets] = useState();
+    const [tweets, setTweets] = useState([]);
 
     useEffect(() => {
-
         getAllTweets((isok, data) => {
-            if (!isok)
+            if (isok)
                 // return alert("not success")
                 setTweets(data)
         })
+        
     }, [])
     return (
         <div className={classes.root}>
-            <Header />
+            <Header titel={"خانه"} icon={<HomeIcon/>}/>
             <Divider className={classes.divider}/>
             <NewTweet />
             <TweetList data={tweets} />

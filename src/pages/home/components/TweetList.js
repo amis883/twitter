@@ -1,14 +1,14 @@
-
 import React from 'react';
-import Tweet from '../components/Tweet'
+import Tweet from "./Tweet";
 
-const TweetList = ({ data }) => {
+const TweetList = ({data}) => {
 
-    return (
-        <>
-            {/* {data.map(tweet => <Tweet data={tweet} />)} */}
-        </>
-    );
+  return (
+    <div>
+      
+      {data.map((tweet,index) => <Tweet data={tweet} key={index}/>)}
+    </div>
+  );
 };
 
 export default TweetList;

@@ -1,11 +1,14 @@
-import React from 'react';
-
-const header = () => {
+import React from 'react'
+import useStyle from '../Header/styles'
+import Typography from '@material-ui/core/Typography'
+const Header = ({title,icon}) => {
+    const classes = useStyle()
     return (
-        <div>
-            <h1>Header</h1>
+        <div className={classes.header}>
+            {icon}
+            <Typography className={classes.headerTitle}>{title}</Typography>
         </div>
-    );
-};
+    )
+}
 
-export default header;
+export default Header

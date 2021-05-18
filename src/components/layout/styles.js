@@ -22,6 +22,11 @@ const useStyles = makeStyles({
         flex: 1,
         backgroundColor: 'yellow '
     },
+    content:{
+        flex: '1 ',
+        overflowY: 'auto',
+        backgroundColor:'white'
+    }
 
 
 

@@ -2,9 +2,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flex: '1 ',
         backgroundColor: '#e6e6e6',
-        overflowY: 'auto'
+        
     },
     header: {
         padding: '18px',
@@ -39,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         border: 'none',
         '&:focus': {
             outline: 'unset'
-        },
+        }},
         newTweetBtn: {
             color: 'white',
             borderRadious: '20px !important',
@@ -50,7 +49,8 @@ const useStyles = makeStyles(theme => ({
             minWidth: '5rem !important'
         },
         tweetItemName: {
-            fontWeight: '600'
+            fontWeight: '600',
+            fontSize:'20px'
         },
         tweetItemId: {
             fontSize: '.9rem',
@@ -59,40 +59,25 @@ const useStyles = makeStyles(theme => ({
             paddingTop: '.1rem'
         },
 
-        newTweetImgBtn: {
-            border: '1px solid #333',
-            padding: '.2rem !important',
-            borderRadious: '50%',
-            marginLeft: '1rem'
-        },
+        
         tweetText: {
             fontSize: '.9rem',
             paddingTop: '.75rem'
-        },
-        likeCount: {
-            color: theme.palette.text.hint,
-            fontSize: '.9rem',
-            marginLeft: '.5rem'
         }
-    }
+    
     ,
-    newTweetBtn: {
-        color: 'white !important',
-        minHeight: '30px !important',
-        height: '30px !important',
-        fontFamily: 'shabnam',
-        lineHeight: '16px !important'
-        , minWidth: '5rem !important'
+    likeCount: {
+        color: theme.palette.text.hint,
+        fontSize: '.9rem',
+        marginLeft: '8px' 
     },
+  
     newTweetImg: {
-
-
     },
     newTweetImgBtn: {
         border: '0.5px solid #3337',
         padding: '0.2rem !important',
         marginLeft: '16px'
-
     }
 }))
 
