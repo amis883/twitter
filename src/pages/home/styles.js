@@ -8,12 +8,14 @@ const useStyles = makeStyles(theme => ({
     header: {
         padding: '18px',
         backgroundColor: 'white',
-        display: 'flex'
+        display: 'flex',
+        
     },
     headerTitle: {
         fontSize: '1.2rem',
         fontWeight: '600',
-        marginRight: '0.5rem'
+        marginRight: '0.5rem',
+       
     },
     divider: {
         backgroundColor: '#7ebaff',

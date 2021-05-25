@@ -6,14 +6,14 @@ import useStyles from './styles'
 
 const Tweeter = ({ name, id, img }) => {
     const classes = useStyles()
-    // const [users, setUsers] = useState([]);
-    // useEffect(() => {
-    //     getUsers((isok, data) => {
-    //         if (!isok)
-    //             // return alert("not success")
-    //             setUsers(data)
-    //     })
-    // }, [])
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        getUsers((isok, data) => {
+            if (!isok)
+                // return alert("not success")
+                setUsers(data)
+        })
+    }, [])
 
     return <ButtonBase className={classes.ButtonBase}>
         <Grid container direction={"row"} className={classes.tweeterParent}>
@@ -61,7 +61,7 @@ const LeftSidebar = () => {
     return (
         <div className={classes.root}  >
             <Grid container direction={"row-reverse"} onClick={handleToggleMenu} style={{ cursor: 'pointer' }} >
-                <img src={'/images/user img.png'} alt={"user"} style={{ width: 'max-content' }} />
+                <img src={'/images/bil.png'} alt={"user"} style={{ width: 'max-content' }} />
                 <Grid item container style={{ width: 'max-content' }} direction={"column"} className={classes.profText}>
                     <Typography className={classes.profName}>هدا سادات کاخکی</Typography>
                     <Typography className={classes.profId}>hodajoooooon</Typography>

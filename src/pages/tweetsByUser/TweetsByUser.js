@@ -20,7 +20,7 @@ const TweetsByUser = (props) => {
     const classes = useStyles;
     return (
         <div className={classes.root}>
-            <Header title={props.match.params.user}
+            <Header title={'hoda'}
                 icon={<PersonIcon />} />
             <Divider />
             <TweetList data={tweets} />

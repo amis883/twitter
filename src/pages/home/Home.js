@@ -76,7 +76,7 @@ const Home = () => {
             <Header titel={"خانه"} icon={<HomeIcon/>}/>
             <Divider className={classes.divider}/>
             <NewTweet />
-            <TweetList data={tweets} />
+            <TweetList data={TweetList} />
         </div>
     )
 }
