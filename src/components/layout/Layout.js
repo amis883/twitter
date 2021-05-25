@@ -16,6 +16,7 @@ const Layout = () => {
 <Home/>
 {/* <div className={classes.content}> <TweetByHashtag/></div> */}
             {/* <div className={classes.mainPart}>main part</div> */}
+    {/* <div className={classes.content}>{process.children}</div> */}
             <Divider orientation={'vertical'} className={classes.divider} />
             <LeftSidebar />
 

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
     root: {
         backgroundColor: '#e6e6e6',
+        flex:'1'
         
     },
     header: {

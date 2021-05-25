@@ -5,7 +5,8 @@ const useStyles = makeStyles({
     display: 'flex',
     height: '100vh',
     width: '100%',
-    overflow: 'hidden'},
+    overflow: 'hidden'
+  },
     
   leftSidebar: {
     backgroundColor: 'white',
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
     filter : "opacity(0.5)"
   },
   content:{
-    flex: 1,
+    flex: '1 !important',
     overflowY : 'auto',
     backgroundColor : 'white'
   },
@@ -31,8 +32,7 @@ const useStyles = makeStyles({
     top:0,
     left:0,
     width : '100%',
-    height:'100vh',
-  }
+    height:'100vh'  }
 });
 
 
